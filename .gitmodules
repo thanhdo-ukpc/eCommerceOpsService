@@ -1,0 +1,3 @@
+[submodule "src/submodules/ecommerce-ops-base-model"]
+	path = src/submodules/ecommerce-ops-base-model
+	url = git@github.com:thanhdo-ukpc/EcommerceOpsBaseModel.git
