@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
+import { requirer } from './helper/Requirer';
+import { appConfig } from './constant/IConfig';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+    controllers: [...requirer('dist/modules/*/controllers/*')],
+    providers: [...requirer('dist/modules/*/services/*'), ...requirer('dist/modules/*/repositories/*')],
 })
 export class AppModule {}

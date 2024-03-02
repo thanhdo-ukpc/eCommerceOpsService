@@ -4,8 +4,6 @@ import * as bodyParser from 'body-parser';
 import * as cookieParser from 'cookie-parser';
 import { config } from 'dotenv';
 import { AppModule } from './app.module';
-import { appConfig, IS_DEVELOPER_ENV } from './constant/IConfig';
-import { MigrationHelper } from './sequelize/MigrationHelper';
 
 config();
 const migrationWardenPaths = [`dist/*/warden/database/entities`, `dist/*/warden/database/seeders`];
